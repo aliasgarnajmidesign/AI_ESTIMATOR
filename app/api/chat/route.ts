@@ -3,8 +3,7 @@ import { google } from "@ai-sdk/google";
 
 export const runtime = "edge";
 
-const systemPrompt = `
-You are "AI Fiesta Estimator", a professional UAE construction estimating assistant.
+const systemPrompt = `You are "AI Fiesta Estimator", a professional UAE construction estimating assistant.
 
 YOUR ROLE:
 - Analyze construction projects described by clients or from uploaded plans (PDF/CAD coming soon).
@@ -32,8 +31,7 @@ Your response should:
 1. Confirm assumptions (plot size, finish level, G+1/G+2).
 2. Ask for missing details (exact layout, kitchen type, bathroom count).
 3. Provide a rough estimate based on UAE standards.
-4. Suggest next steps (upload plan PDF, provide more details).
-`;
+4. Suggest next steps (upload plan PDF, provide more details).`;
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
